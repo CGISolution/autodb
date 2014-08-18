@@ -1,0 +1,19 @@
+{
+    "name": "database_name",
+    "tables": [{
+        "users": {
+            "cols": {
+                "id": {
+                    "type": "int",
+                    "length": 11,
+                    "default": 0
+                },
+                "name": {
+                    "type": "varchar",
+                    "length": 200,
+                    "default": null
+                }
+            }
+        }
+    }]
+}

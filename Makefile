@@ -5,11 +5,15 @@ PYTHON = $(shell test -x bin/python && echo bin/python || echo `which python`)
 #PYVERS = $(shell $(PYTHON) -c 'import sys; print "%s.%s" % sys.version_info[0:2]')
 BUILD_NUMBER ?= 1
 
+test:
+	@$(PYTHON) autodb.py
+
 all:
 	$(PYTHON) autodb.py autodb
 
 clean:
-	@echo "Removing .pyc"
+	@pyclean .
+
 
 debian/changelog:
 	git branch -D changelog
